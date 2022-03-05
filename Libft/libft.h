@@ -6,7 +6,7 @@
 /*   By: yzhang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 17:03:17 by yzhang            #+#    #+#             */
-/*   Updated: 2022/02/20 17:03:26 by yzhang           ###   ########.fr       */
+/*   Updated: 2022/03/05 20:32:37 by yzhang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,8 @@ char			**ft_split(char const *s, char c);
 char			*ft_strchr(const char *s, int c);
 
 char			*ft_strdup(const char *s1);
+
+void			ft_striteri(char *s, void (*f)(unsigned int, char *));
 
 char			*ft_strjoin(char const *s1, char const *s2);
 

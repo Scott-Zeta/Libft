@@ -6,7 +6,7 @@
 /*   By: yzhang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/10 16:40:22 by yzhang            #+#    #+#             */
-/*   Updated: 2022/02/19 19:53:47 by yzhang           ###   ########.fr       */
+/*   Updated: 2022/03/05 20:09:24 by yzhang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,23 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int			i;
-	const char	*copy;
+	char	*result;
+	char	*ptr;
 
-	copy = s;
-	i = ft_strlen(s);
-	s += i;
-	while (*s != *copy && c != *s)
-		s--;
-	if (c == *s)
-		return ((char *)s);
-	return (0);
+	ptr = (char *)s;
+	c = (char)c;
+	result = NULL;
+	while (*ptr)
+	{
+		if (*ptr == c)
+		{
+			result = ptr;
+		}
+		ptr++;
+	}
+	if (*ptr == c)
+	{
+		result = ptr;
+	}
+	return (result);
 }
